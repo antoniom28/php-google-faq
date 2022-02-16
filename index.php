@@ -52,6 +52,15 @@ $menu_item = [
     "<a href='#'> Tecnologie </a>",
     "<a href='#'> Domande frequenti </a>"
 ];
+
+$language_list = [
+    "ita" => "italiano",
+    "en" => "english",
+    "fr" => "français",
+    "de" => "deutsch",
+    "es" => "español"
+];
+
 ?>
 
 <!DOCTYPE html>
@@ -109,8 +118,10 @@ $menu_item = [
 
             <div class="footer-right">
                 <select name="language" id="lang">
-                <option value="ciao">lingue</option>
-                <option value="ciao">lingue</option>
+                <?php
+                    foreach($language_list as $value => $lang)
+                        echo "<option value='$value'>".$lang."</option>"
+                ?>
                 </select>
             </div>
         </div>
